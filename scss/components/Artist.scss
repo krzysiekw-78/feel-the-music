@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.bioArtist{
+  color: white;
+  text-align: justify;
+  padding: 8px;
+}
+
+.searchBox{
+  height: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.artistTitle{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-shadow: 5px 5px 5px #ff6d15;
+}
+
+.artistName, .artistImage{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  line-height: 300px;
+  font-family: 'Permanent Marker', cursive;
+  color: yellow;
+  font-size: 100px;
+}
+
+input{
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  border: none;
+  margin-right: 5px;
+}
+
+input:focus{
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(29,46,227,1);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(29,46,227,1);
+  box-shadow: 0px 0px 15px 0px rgba(29,46,227,1);
+}
+
+div.searchBtn{
+  width: 100px;
+  height: 23px;
+  padding: 5px 5px;
+  line-height: 25px;
+  border-radius: 5px;
+  border: 1px solid #062f4f;
+  background-color: #779126;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  &:hover{
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(224, 227, 149);
+    -moz-box-shadow: 0px 0px 15px 0px rgb(224, 227, 149);
+    box-shadow: 0px 0px 15px 0px rgb(224, 227, 149);
+  }
+}
+
+@media (max-width: 650px) {
+  .artistTitle{
+    flex-wrap: wrap;
+  }
+  .artistName{
+    height: 120px;
+    line-height: 120px;
+  }
+}

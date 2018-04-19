@@ -1,0 +1,46 @@
+{
+  "category" : {
+    "pop": [
+      {
+        "id": 1,
+        "name": "Madonna - La Isla Bonita",
+        "track": "https://www.youtube.com/watch?v=qqIIW7nxBgc"
+      },
+      {
+        "id": 2,
+        "name": "Ed Sheeran - Perfect",
+        "track": "https://www.youtube.com/watch?v=2Vv-BfVoq4g"
+      },
+      {
+        "id": 3,
+        "name": "Rita Ora - Anywhere",
+        "track": "https://www.youtube.com/watch?v=ksdAs4LBRq8"
+      }
+    ],
+    "chillout": [
+      {
+        "id": 1,
+        "name": "JJOS - Take Me Out",
+        "track": "https://www.youtube.com/watch?v=RUSxBvdoRUs"
+      },
+      {
+        "id": 2,
+        "name": "Feelin Happy Summer",
+        "track": "https://www.youtube.com/watch?v=WpFqbjI2bkc"
+      }
+    ],
+    "rock": [
+      {
+        "id": 1,
+        "name": "Red Hot Chili Peppers - Californication",
+        "track": "https://www.youtube.com/watch?v=YlUKcNNmywk"
+      },
+      {
+        "id": 2,
+        "name": "Bon Jovi - Livin' On A Prayer",
+        "track": "https://www.youtube.com/watch?v=lDK9QqIzhwk"
+      }
+    ]
+  }
+
+}

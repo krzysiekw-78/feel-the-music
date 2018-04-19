@@ -1,0 +1,82 @@
+.mainContent{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slide{
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  position: relative;
+  margin-right: 20px;
+  margin-top: 10px;
+
+  -webkit-box-shadow: 0px 0px 50px -5px rgba(240,206,240,1);
+  -moz-box-shadow: 0px 0px 50px -5px rgba(240,206,240,1);
+  box-shadow: 0px 0px 50px -5px rgba(240,206,240,1);
+}
+
+.slideLeft{
+  background: lightgrey url("../../assets/images/poczuj.jpg");
+  &:hover{
+    background: lightgrey url("../../assets/images/poczuj_op.png");
+  }
+}
+
+.slideCenter{
+  background: lightgrey url("../../assets/images/radosc.jpg");
+  &:hover{
+    background: lightgrey url("../../assets/images/radosc_op.png");
+  }
+}
+
+.slideRight{
+  background: lightgrey url("../../assets/images/muzyki.jpg");
+  &:hover{
+    background: lightgrey url("../../assets/images/muzyki_op.png");
+  }
+}
+
+.overlay{
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  right: 0;
+  //background-color: #9A4912;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+  border-radius: 100%;
+}
+
+.slide:hover .overlay{
+  width: 80%;
+  height: 80%;
+}
+
+.text{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 60px;
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+  color: yellow;
+  text-shadow: 5px 5px 5px #ff6d15;
+}
+
+@media (max-width: 905px) {
+  .mainContent{
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

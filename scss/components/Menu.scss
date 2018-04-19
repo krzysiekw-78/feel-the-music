@@ -1,0 +1,119 @@
+div.topMenu{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  width: 150px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #062f4f;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.menuActive {
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+//.wrapper {
+//  position: absolute;
+//}
+//
+//.btn {
+//  position: relative;
+//  display: inline-block;
+//  padding: 10px 30px;
+//  text-align: center;
+//  overflow: hidden;
+//  z-index: 1;
+//  cursor: pointer;
+//  color: white;
+//  margin-right: 10px;
+//  border-width: 1px;
+//  border-style: solid;
+//  border-radius: 10px;
+//  box-sizing: border-box;
+//}
+//
+//.btn--animated {
+//  transition-duration: 0.5s;
+//  border: 1px solid #062f4f;
+//
+//  &:before {
+//    content: "";
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    background: #062f4f;
+//    transform: scaleX(0.5);
+//    transition-property: transform;
+//    transition-duration: 0.5s;
+//    transition-timing-function: ease-out;
+//    z-index: -1;
+//  }
+//
+//  &:hover {
+//    color: white;
+//    transform: scale(1.1);
+//
+//    &:before {
+//      transform: scaleX(1);
+//      transition-duration: 0.5s;
+//    }
+//  }
+//}
+
+li{
+  display: inline-block;
+  list-style-type: none;
+  width: 150px;
+  height: 40px;
+  background: #062f4f;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  //border-radius: 20px;
+  color: lightgrey;
+  transform: skewX(-45deg);
+}
+
+li a{
+  text-decoration: none;
+  display: block;
+  transform: skewX(45deg);
+  color: lightgrey;
+}
+
+a, a:visited, a:focus, a:active, a:hover{
+  outline: 0 none;
+}
+
+li a:hover{
+  transform: scale(1.2);
+}
+
+li a:visited{
+  text-decoration: none;
+  color: lightgrey;
+  transform: skewX(45deg);
+}
+
+li a.menuActive {
+  color: yellow;
+  //background: blueviolet;
+  //border-radius: 20px;
+  transform: skewX(45deg);
+}
+
+@media (max-width: 550px) {
+  li{
+    display: block;
+  }
+}

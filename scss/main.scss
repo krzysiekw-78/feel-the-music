@@ -1,0 +1,23 @@
+@import "components/Header.scss";
+@import "components/Menu.scss";
+@import "components/Artist.scss";
+@import "components/MainPage.scss";
+@import "components/Player.scss";
+@import "partials/fonts.scss";
+@import "components/Footer.scss";
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: url("../assets/images/people.jpg") no-repeat fixed;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.container{
+  max-width: 1060px;
+  margin: 0 auto;
+}
