@@ -5,10 +5,11 @@ export class Artist extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            artistName: '',
+            artistName: null,
             artistPicture: null,
             artistTextSearch:'',
             artistBioContent: '',
+            similarArtists: [],
         }
     }
 
@@ -19,6 +20,7 @@ export class Artist extends React.Component{
                 artistName: data.artist.name,
                 artistPicture: data.artist.image[3]['#text'],
                 artistBioContent: data.artist.bio.summary,
+                similarArtists: data.artist.similar.artist,
             }) )
             .catch( err => console.log(err) );
     }
@@ -31,16 +33,21 @@ export class Artist extends React.Component{
         this.setState({
             artistTextSearch: event.target.value
         })
-    }
+    };
 
     handleArtist = (event) => {
         event.preventDefault();
-        this.setState({
-            artistName: this.state.artistTextSearch
-        })
         this.showArtist()
+    };
 
-    }
+    similarShowInfo = (event) => {
+        event.preventDefault();
+        this.setState({
+            artistTextSearch: event.target.dataset.value
+        }, () => this.showArtist());
+        //dodaje funkcje dla pewności odświeżenia state
+
+    };
 
     render(){
 
@@ -48,17 +55,29 @@ export class Artist extends React.Component{
             <input placeholder={'Find artist'} onChange={this.artistInput}/><div onClick={this.handleArtist} className='searchBtn'>Search</div>
         </div>;
 
-        if(this.state.artistName === null) return {findArtist};
+        if(this.state.artistName === null) return findArtist;
 
-        return <div>
+        return (<div>
             {findArtist}
             <div className='artistTitle'>
                 <div className='artistName'>{this.state.artistName}</div>
                 <div className='artistImage'>
-                    <img src={this.state.artistPicture}/>
+                    <img className='mainImage' src={this.state.artistPicture}/>
                 </div>
             </div>
             <p className='bioArtist'>{this.state.artistBioContent}</p>
-        </div>
+            <div className='similarArtistText'>Similar artists</div>
+            <div className='simArtists'>
+                <div className='similarArtistsList'>
+                    {this.state.similarArtists.map(el =>
+                        <div className='similarArtistsInfo'>
+                            <div className='similarArtistImage'><img src={el.image[1]['#text']}/></div>
+                            <div className='similarArtistName'>{el.name}</div>
+                            <div className='showArtistInfo' data-value={el.name} onClick={this.similarShowInfo}>Show me more...</div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>)
     }
 }
