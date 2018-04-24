@@ -48,12 +48,6 @@ export class Player extends React.Component{
         })
     };
 
-    // handleStop = (event) => {
-    //     event.preventDefault();
-    //     this.setState({
-    //         playing: false
-    //     })
-    // };
 
     render () {
         if(this.state.data === null) return null;
