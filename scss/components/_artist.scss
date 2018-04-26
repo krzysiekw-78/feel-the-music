@@ -1,5 +1,5 @@
 .bioArtist{
-  color: white;
+  color: #062f4f;
   text-align: justify;
   padding: 8px;
 }
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  text-shadow: 5px 5px 5px #ff6d15;
+  //text-shadow: 5px 5px 5px #ff6d15;
 }
 
 .artistName, .artistImage{
@@ -24,13 +24,15 @@
   flex-wrap: wrap;
   justify-content: center;
   height: 300px;
-  font-family: 'Permanent Marker', cursive;
-  color: yellow;
+  //font-family: 'Permanent Marker', cursive;
+  font-family: 'Covered By Your Grace', cursive;
+  color: #779126;
+  text-shadow: 2px 2px 2px yellow;
   font-size: 100px;
 }
 
 .mainImage{
-  border: 2px dashed white;
+  border: 1px dashed #062f4f;
   border-radius: 20px;
 }
 
@@ -39,7 +41,7 @@ input{
   height: 25px;
   border-radius: 5px;
   padding: 5px 5px;
-  border: none;
+  border: 1px solid #062f4f;
   margin-right: 5px;
 }
 
@@ -69,8 +71,9 @@ div.searchBtn{
 }
 
 .similarArtistText{
-  font-family: 'Permanent Marker', cursive;
+  //font-family: 'Permanent Marker', cursive;
   color: #779126;
+  font-family: 'Covered By Your Grace', cursive;
   text-shadow: 2px 2px 2px yellow;
   font-size: 36px;
 
@@ -88,8 +91,8 @@ div.searchBtn{
   margin-top: 10px;
   border-radius: 10px;
   justify-content: center;
-  border: 1px dashed white;
-  background: rgba(255, 109, 21, 0.5);
+  border: 1px dashed #062f4f;
+  //background: rgba(207, 255, 184, 0.5);
   display: flex;
   flex-wrap: wrap;
 }
@@ -117,8 +120,9 @@ div.searchBtn{
   text-align: center;
   cursor: pointer;
   background-color: #779126;
+  color: white;
   border-radius: 10px;
-  border: 1px dashed white;
+  //border: 1px dashed white;
 }
 
 @media (max-width: 650px) {
