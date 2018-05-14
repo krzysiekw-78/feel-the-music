@@ -63,9 +63,9 @@ export class Player extends React.Component{
                 <select onChange={this.selectSong} className='chooseSong'>
                     {this.state.data[this.state.selectedCategory].map((el, index) => <option value={index}>{el.name}</option>)}
                 </select><br/>
-                <div onClick={this.handlePlay} className='playSong'>Wczytaj</div>
-                {/*<div onClick={this.handleStop} className='stopSong'>Stop</div>*/}
+                <div onClick={this.handlePlay} className='playSong'>Wczytaj</div>                
             </div>
+            <div>(You have to run json-server)</div>
 
            <div className='playerArray'>
                 <ReactPlayer url={this.state.track} controls playing/>
