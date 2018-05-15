@@ -65,7 +65,7 @@ export class Player extends React.Component{
                 </select><br/>
                 <div onClick={this.handlePlay} className='playSong'>Wczytaj</div>                
             </div>
-            <div>(You have to run json-server)</div>
+            <div>(At this moment it works only with local json-server)</div>
 
            <div className='playerArray'>
                 <ReactPlayer url={this.state.track} controls playing/>
